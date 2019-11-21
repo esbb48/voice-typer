@@ -1,0 +1,25 @@
+  {
+  "manifest_version": 2,
+  "name": "Voice Typer",
+  "description": "Voice Typer",
+  "version": "1.0",
+  "page_action": {
+    "default_icon": "logo.jpg",
+    "default_title": "Voice Typer"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts" : [
+    {
+      "matches" : ["https://tw.voicetube.com/videos/*"],
+      "js" : ["content.js"]
+    }
+  ],
+  "devtools_page": "devtools.html"
+}

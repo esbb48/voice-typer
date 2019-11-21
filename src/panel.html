@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Voice Typer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      html {
+        background: white;
+      }
+      div.container {
+        margin: 0 auto;
+        width: 1024px;
+        text-align: center;
+      }
+      button, input {
+        outline: none;
+      }
+      input[type=text] {
+        background: white;
+        border: 0;
+        border-bottom: 1px solid #888;
+        font-size: 20px;
+        margin: 10px;
+        padding-bottom: 5px;
+        text-align: center;
+      }
+      .hidden {
+        display: none;
+      }
+      #text-area > div {
+        color: cornflowerblue;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 10px;
+      }
+      #input-area {
+        font-size: 20px;
+        margin: 30px 0;
+      }
+      input.error {
+        border-bottom: 1px solid #f44336;
+        color: #f44336;
+      }
+      input.success {
+        border-bottom: 1px solid #42b983;
+        color: #42b983;
+      }
+    </style>
+    <script src="panel.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <button id="init-btn">初始化</button>
+      <button id="prev-btn"><< 上一句</button>
+      <button id="repeat-btn">重複本句</button>
+      <button id="next-btn">下一句 >></button>
+      |
+      <button id="cn-btn">中文提示</button>
+      <button id="en-btn">英文提示</button>
+      <div id="text-area">
+        <div id="cn-text" class="hidden"></div>
+        <div id="en-text" class="hidden"></div>
+      </div>
+      <form id="form" class="">
+        <div id="input-area"></div>
+        <button class="hidden" type="submit" id="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
